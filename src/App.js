@@ -39,6 +39,7 @@ const useScript = (url) => {
         "setPath",
         window.location.pathname + window.location.hash.replace("#", "?__"),
       ]);
+      window._uxa.push(["trackPageview", "styled-component: home page"]);
       var mt = document.createElement("script");
       mt.type = "text/javascript";
       mt.async = true;
