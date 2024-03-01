@@ -50,14 +50,10 @@ const useScript = (url) => {
         window.location.pathname + window.location.hash.replace("#", "?__"),
       ]);
     }
-
-    return () => {
-      document.head.removeChild(script);
-    };
   }, [url]);
 };
 
-function trackScreen() {
+const trackScreen = () => {
   console.log("click on button");
   window._uxa = window._uxa || [];
   window._uxa.push(["trackPageview", "styled-component: home page"]);
