@@ -1,6 +1,6 @@
 import "./App.css";
-import styled from "styled-components";
-// import styled, { StyleSheetManager } from "styled-components";
+// import styled from "styled-components";
+import styled, { StyleSheetManager } from "styled-components";
 import { useEffect } from "react";
 
 const Title = styled.h1`
@@ -67,13 +67,13 @@ function App() {
   useScript("https://t.contentsquare.net/uxa/8debe904a8da2.js");
   return (
     <div className="App">
-      {/* <StyleSheetManager disableCSSOMInjection> */}
+      <StyleSheetManager disableCSSOMInjection>
       <Wrapper>
         <Title>Hello World!</Title>
         <Button onClick={trackScreen}>Normal Button</Button>
         <TomatoButton>Tomato Button</TomatoButton>
       </Wrapper>
-      {/* </StyleSheetManager> */}
+      </StyleSheetManager>
     </div>
   );
 }
