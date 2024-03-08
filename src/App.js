@@ -64,16 +64,14 @@ const trackScreen = () => {
 }
 
 function App() {
-  useScript("https://t.contentsquare.net/uxa/8debe904a8da2.js");
+  useScript("https://t-staging.contentsquare.net/uxa/f6ac8571fdfc9.js");
   return (
     <div className="App">
-      <StyleSheetManager disableCSSOMInjection>
       <Wrapper>
         <Title>Hello World!</Title>
         <Button onClick={trackScreen}>Normal Button</Button>
         <TomatoButton>Tomato Button</TomatoButton>
       </Wrapper>
-      </StyleSheetManager>
     </div>
   );
 }
@@ -81,6 +79,7 @@ function App() {
 export default App;
 
 /**
- * insertRule: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule
- * deleteRule: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/deleteRule
+ * Use this to inject CSS into the DOM
+ * <StyleSheetManager disableCSSOMInjection>
+ * </StyleSheetManager>
  */
