@@ -64,7 +64,7 @@ const trackScreen = () => {
 }
 
 function App() {
-  useScript("https://t-staging.contentsquare.net/uxa/f6ac8571fdfc9.js");
+  useScript("https://t.contentsquare.net/uxa/8debe904a8da2.js");
   return (
     <div className="App">
       <Wrapper>
