@@ -25,6 +25,18 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script type="text/javascript">
+      (function () {
+        window._uxa = window._uxa || [];
+        window._uxa.push(["setOption", "isWebView", true]);
+        window._uxa.push(["trackPageview", "styled-component: home page"]);
+        var mt = document.createElement("script");
+        mt.type = "text/javascript";
+        mt.async = true;
+        mt.src = "%PUBLIC_URL%/tt.js";
+        document.getElementsByTagName("head")[0].appendChild(mt);
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

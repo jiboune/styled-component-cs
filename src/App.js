@@ -1,7 +1,6 @@
 import "./App.css";
 // import styled from "styled-components";
 import styled, { StyleSheetManager } from "styled-components";
-import { useEffect } from "react";
 
 const Title = styled.h1`
   font-size: 1.5em;
@@ -31,32 +30,6 @@ const TomatoButton = styled(Button)`
   border-color: tomato;
 `;
 
-const useScript = (url) => {
-  useEffect(() => {
-    window._uxa = window._uxa || [];
-    window._uxa.push(['setOption', 'isWebView', true]);
-
-    if (typeof CS_CONF === "undefined") {
-      window._uxa.push([
-        "setPath",
-        window.location.pathname + window.location.hash.replace("#", "?__"),
-      ]);
-      
-      window._uxa.push(["trackPageview", "styled-component: home page"]);
-      var mt = document.createElement("script");
-      mt.type = "text/javascript";
-      mt.async = true;
-      mt.src = url;
-      document.getElementsByTagName("head")[0].appendChild(mt);
-    } else {
-      window._uxa.push([
-        "trackPageview",
-        window.location.pathname + window.location.hash.replace("#", "?__"),
-      ]);
-    }
-  }, [url]);
-};
-
 const trackScreen = () => {
   console.log("click on button");
   window._uxa = window._uxa || [];
@@ -64,7 +37,6 @@ const trackScreen = () => {
 }
 
 function App() {
-  useScript("./../public/tt.js");
   return (
     <div className="App">
       <Wrapper>
